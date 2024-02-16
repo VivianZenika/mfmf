@@ -4,6 +4,8 @@
   "description": "Micro Front with the Module Federation pattern",
   "main": "index.js",
   "scripts": {
+    "install": "cd blog && npm i && cd ../core && npm i",
+    "dev": "(cd blog && npm run start) & (cd core && npm run start)",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

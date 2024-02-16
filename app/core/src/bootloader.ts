@@ -3,7 +3,7 @@ import { createApp } from "vue";
 import "./index.scss";
 
 import { createRouter, createWebHistory } from "vue-router";
-import { createStore } from "vuex";
+import { Store, createStore } from "vuex";
 
 import BlogMain from "blog/BlogMain";
 import BlogArticle from "blog/BlogArticle";
@@ -25,7 +25,8 @@ const router = createRouter({
   routes,
 });
 
-const store = createStore({
+export type State = { isAuth: boolean };
+const store: Store<State> = createStore({
   state() {
     return {
       isAuth: false,
