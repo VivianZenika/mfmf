@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "author": {
-    "name": "Jack Herrington",
+    "name": "Jack Herrington", // supprime peut-être la partie author, ou mettre ton nom ?
     "email": "jherr@pobox.com"
   },
   "devDependencies": {
@@ -38,6 +38,6 @@
     "@headlessui/vue": "^1.7.16",
     "vue": "^3.2.19",
     "vue-router": "^4.2.5",
-    "vuex": "^4.1.0"
+    "vuex": "^4.1.0" // remplacer par pinia éventuellement pour se rapprocher des standards ?
   }
 }

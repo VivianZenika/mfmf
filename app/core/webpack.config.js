@@ -1,3 +1,6 @@
+// question ? t'es sûr de partir sur webpack pour ta démo ? mine de rien, on n'est pas trop sur les précos officielles côté vue
+// pour info le plugin vite-federation fonctionne bien. les apis sont globalement les mêmes
+// si tu utilises vite, tu pourras virer pas mal de complexité mine de rien. babel notamment
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const { VueLoaderPlugin } = require("vue-loader");

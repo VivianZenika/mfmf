@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { getCurrentInstance, isReactive } from "vue";
+// je ne connaissais pas cette méthode. à priori, elle est dépréciée. https://github.com/vuejs/docs/issues/1422#issuecomment-1032120675
+// tu ne peux pas utiliser une computed tout simplement
+// en montrant l'accès au store, ce qui serait intéressant, ce serait de mentionner l'importance de coder de manière défensive quand on développe sur un microfront
+// car finalement, on n'a pas forcément l'assurance que le host ait fourni une instance de store
 const instance = getCurrentInstance();
 console.log(
   "Is isAuth reactive?:",

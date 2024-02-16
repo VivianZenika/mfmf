@@ -1,3 +1,4 @@
+// renommer le dossier services par fixtures ?
 export const posts = [
   {
     id: 1,

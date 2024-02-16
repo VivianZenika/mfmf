@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// peut-être typer post au moyen de TS ?
 defineProps(["post"]);
 </script>
 

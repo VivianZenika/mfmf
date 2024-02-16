@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { posts } from "../services/posts";
+// je ne pense pas que l'ID soit réactif. si tu passes de /article/1 à /article/2 sans repasser par la page d'accueil,
+// il y a de fortes chances pour que le contenu de l'article ne soit aps mis à jour
+// https://router.vuejs.org/guide/essentials/dynamic-matching.html#Reacting-to-Params-Changes
 const articleId = Number(window.location.href.split("/").pop());
 const post = posts.find((el) => el.id === articleId);
 </script>
