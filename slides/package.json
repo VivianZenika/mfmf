@@ -1,0 +1,14 @@
+{
+  "name": "ts-apw-jaz-rex",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.47",
+    "@slidev/theme-default": "^0.25.0",
+    "playwright-chromium": "^1.41.2"
+  }
+}
