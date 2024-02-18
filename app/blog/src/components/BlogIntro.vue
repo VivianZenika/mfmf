@@ -1,10 +1,7 @@
 <script setup lang="ts">
-import { getCurrentInstance, isReactive } from "vue";
-const instance = getCurrentInstance();
-console.log(
-  "Is isAuth reactive?:",
-  isReactive(instance?.appContext.provides.store.state)
-);
+import { useStore } from "vuex";
+const store = useStore();
+console.log(store.state);
 </script>
 <template>
   <div class="mx-auto max-w-2xl text-center">

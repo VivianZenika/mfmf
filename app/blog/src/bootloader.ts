@@ -3,6 +3,8 @@ import { createApp } from "vue";
 import "./index.scss";
 
 import { createRouter, createWebHistory } from "vue-router";
+import { type Store, createStore } from "vuex";
+import { type BlogState } from "./types/Store";
 
 import BlogMain from "./components/BlogMain.vue";
 import BlogArticle from "./components/BlogArticle.vue";
@@ -24,4 +26,12 @@ const router = createRouter({
   routes,
 });
 
-createApp(App).use(router).mount("#app");
+const store: Store<BlogState> = createStore({
+  state() {
+    return {
+      visitedArticles: [],
+    };
+  },
+});
+
+createApp(App).use(router).use(store).mount("#app");

@@ -48,7 +48,6 @@ module.exports = (_, argv) => ({
     new ModuleFederationPlugin({
       name: "blog",
       filename: "remoteEntry.js",
-      remotes: {},
       library: { type: "var", name: "blog" },
       exposes: {
         "./BlogMain": "./src/components/BlogMain",

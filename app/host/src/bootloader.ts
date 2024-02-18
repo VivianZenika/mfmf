@@ -4,6 +4,7 @@ import "./index.scss";
 
 import { createRouter, createWebHistory } from "vue-router";
 import { Store, createStore } from "vuex";
+import { type HostState } from "./types/Store";
 
 import BlogMain from "blog/BlogMain";
 import BlogArticle from "blog/BlogArticle";
@@ -25,8 +26,7 @@ const router = createRouter({
   routes,
 });
 
-export type State = { isAuth: boolean };
-const store: Store<State> = createStore({
+const store: Store<HostState> = createStore({
   state() {
     return {
       isAuth: false,

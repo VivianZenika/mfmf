@@ -1,5 +1,9 @@
 <script setup lang="ts">
-defineProps(["post"]);
+import { type Post } from "../types/Post";
+interface Props {
+  post: Post;
+}
+defineProps<Props>();
 </script>
 
 <template>

@@ -103,7 +103,8 @@ level: 2
 
 # Module Federation c'est quoi ?
 
-Le Module Federation est une fonctionnalité de Webpack qui permet **le partage dynamique de modules JavaScript entre différentes applications front-end**, facilitant ainsi la création d'architectures de type micro frontend, où des parties distinctes de l'interface utilisateur sont développées et déployées indépendamment.
+Le Module Federation est à l'origine une fonctionnalité de Webpack qui permet **le partage dynamique de modules JavaScript entre différentes applications front-end**, facilitant ainsi la création d'architectures de type micro frontend, où des parties distinctes de l'interface utilisateur sont développées et déployées indépendamment.
+> Cette fonctionnalité existe dorénavant pour Vite via un community plugin.
 
 ---
 layout: cover
@@ -116,13 +117,13 @@ level: 3
 
 - **Indépendance et Isolation** : Permet le développement, le déploiement et la mise à jour indépendants de différentes parties de l'interface utilisateur, facilitant la gestion des équipes et la maintenance.
 
-- **Réutilisabilité des Compétences** : Les équipes peuvent travailler sur des technologies frontales spécifiques, favorisant la réutilisabilité des compétences et permettant l'utilisation des frameworks les mieux adaptés à chaque composant.
-
 - **Évolutivité Facilitée** : La conception modulaire du micro frontend facilite l'ajout de nouvelles fonctionnalités, la mise à l'échelle et la modification de parties spécifiques de l'application sans perturber l'ensemble.
 
 - **Partage Dynamique de Modules** : Permet le partage de modules JavaScript entre différentes applications, réduisant la redondance du code et facilitant la gestion des dépendances.
 
 - **Flexibilité dans le Choix des Technologies** : Offre la possibilité d'utiliser différentes technologies frontales au sein d'une même application, favorisant la flexibilité et la réutilisation des composants.
+
+- **Diminution de la charge cognitive** : Lorsque les différentes applications sont logiquement découpées, les équipes ont des périmètres plus restreints à gérer.
 
 
 </v-clicks>
@@ -144,6 +145,9 @@ level: 3
 
 - **Complexité de Configuration** : La configuration du Module Federation peut être complexe, nécessitant une compréhension approfondie de Webpack et des ajustements pour répondre aux besoins spécifiques du projet.
 
+- **Performance** : Lorsque plusieurs frameworks sont fédérés la taille du bundle de production grandit et affecte les performances.
+
+- **Surcoût de CI** : Le découpage induit des déploiements indépendants (notamment via techniques de run-time integration)
 
 </v-clicks>
 

@@ -1,8 +1,8 @@
 import { type Store } from "vuex";
-import { type State } from "../../core/src/bootloader";
+import { type HostState } from "../../host/src/bootloader";
 
 declare module "@vue/runtime-core" {
   interface ComponentCustomProperties {
-    $store: Store<State>;
+    $store: Store<HostState>;
   }
 }

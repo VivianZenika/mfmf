@@ -1,4 +1,5 @@
-export const posts = [
+import { type Post } from "../types/Post";
+export const posts: Post[] = [
   {
     id: 1,
     title: "Boost your conversion rate",

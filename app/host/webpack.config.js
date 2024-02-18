@@ -46,12 +46,11 @@ module.exports = (_, argv) => ({
   plugins: [
     new VueLoaderPlugin(),
     new ModuleFederationPlugin({
-      name: "core",
+      name: "host",
       filename: "remoteEntry.js",
       remotes: {
         blog: "blog@http://localhost:8082/remoteEntry.js",
       },
-      exposes: {},
       shared: require("./package.json").dependencies,
     }),
     new HtmlWebPackPlugin({
