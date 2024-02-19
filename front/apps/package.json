@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "install": "cd blog && npm i && cd ../host && npm i",
-    "dev": "(cd blog && npm run start) & (cd host && npm run start)",
+    "dev": "(cd blog && npm run start:live) & (cd host && npm run start:live)",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

@@ -3,12 +3,14 @@ import { createApp } from "vue";
 import "./index.scss";
 
 import { createRouter, createWebHistory } from "vue-router";
-import { type Store, createStore } from "vuex";
-import { type BlogState } from "./types/Store";
 
-import BlogMain from "./components/BlogMain.vue";
-import BlogArticle from "./components/BlogArticle.vue";
+import { Store, createStore } from "vuex";
+import { type HostState } from "./types/Store";
+
+import BlogMain from "blog/BlogMain";
+import BlogArticle from "blog/BlogArticle";
 import App from "./App.vue";
+import("../../../packages/state/eventListeners");
 
 const routes = [
   {
@@ -26,10 +28,10 @@ const router = createRouter({
   routes,
 });
 
-const store: Store<BlogState> = createStore({
+const store: Store<HostState> = createStore({
   state() {
     return {
-      visitedArticles: [],
+      isAuth: false,
     };
   },
 });
