@@ -1,11 +1,11 @@
 {
-  "name": "host",
+  "name": "remote",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite build --watch",
-    "serve": "vite serve --port 5173",
+    "serve": "vite serve --port 5151",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
@@ -15,7 +15,7 @@
     "vue": "^3.2.47"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue": "^4.1.0",
     "typescript": "^5.0.2",
     "vite": "^4.3.2",
     "vue-tsc": "^1.4.2"
