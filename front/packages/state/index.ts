@@ -8,6 +8,7 @@ export function updateAppState(eventName: string, detail: Record<string, any>) {
       },
     })
   );
+
   Object.entries(detail).map((el) => {
     const [key, value] = el;
     localStorage.setItem(key, JSON.stringify(value));
@@ -23,13 +24,8 @@ export const useStore = () => {
     },
   });
 
-  // @ts-expect-error
   addEventListener("state", (e: CustomEvent) => {
     store.state = { ...e.detail };
   });
-
-  // store.state.isAuth = Boolean(localStorage.getItem("isAuth"));
-  // store.state.user = JSON.parse(localStorage.getItem("user")!);
-
   return store;
 };
