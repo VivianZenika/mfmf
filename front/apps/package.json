@@ -4,10 +4,10 @@
   "description": "Micro Front with the Module Federation pattern",
   "main": "index.js",
   "scripts": {
-    "install": "cd blog && npm i && cd ../host && npm i",
-    "dev": "(cd blog && npm run start:live) & (cd host && npm run start:live)",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install": "cd remote && yarn && cd ../host && yarn",
+    "build": "(cd remote && yarn build:watch) & (cd host && yarn build:watch)",
+    "serve": "(cd remote && yarn serve) & (cd host && yarn serve)"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Vivian SARAZIN",
+  "license": "MIT"
 }
