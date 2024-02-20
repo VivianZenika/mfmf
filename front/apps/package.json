@@ -4,7 +4,7 @@
   "description": "Micro Front with the Module Federation pattern",
   "main": "index.js",
   "scripts": {
-    "install": "cd remote && yarn && cd ../host && yarn",
+    "install": "(cd remote && yarn) & (cd host && yarn)",
     "build": "(cd remote && yarn build:watch) & (cd host && yarn build:watch)",
     "serve": "(cd remote && yarn serve) & (cd host && yarn serve)"
   },
