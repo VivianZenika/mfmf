@@ -4,10 +4,16 @@
   "description": "Micro Front with the Module Federation pattern",
   "main": "index.js",
   "scripts": {
-    "install": "(cd remote && yarn) & (cd host && yarn)",
     "build": "(cd remote && yarn build:watch) & (cd host && yarn build:watch)",
     "serve": "(cd remote && yarn serve) & (cd host && yarn serve)"
   },
   "author": "Vivian SARAZIN",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@originjs/vite-plugin-federation": "^1.3.5",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.1.3",
+    "vite-plugin-top-level-await": "^1.4.1",
+    "vue": "^3.4.19"
+  }
 }
