@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import { useRoute } from "vue-router";
 import { posts } from "../services/posts";
-const articleId = Number(window.location.href.split("/").pop());
-const post = posts.find((el) => el.id === articleId);
+const route = useRoute();
+const post = posts.find((el) => el.id === +route.params.id);
 </script>
 
 <template>

@@ -23,13 +23,13 @@ export const useStore = () => {
     },
   });
 
+  // @ts-expect-error
   addEventListener("state", (e: CustomEvent) => {
-    const nextStore = { ...store.state, ...e.detail };
-    store.state = nextStore;
+    store.state = { ...e.detail };
   });
 
-  store.state.isAuth = Boolean(localStorage.getItem("isAuth"));
-  store.state.user = JSON.parse(localStorage.getItem("user"));
+  // store.state.isAuth = Boolean(localStorage.getItem("isAuth"));
+  // store.state.user = JSON.parse(localStorage.getItem("user")!);
 
   return store;
 };
